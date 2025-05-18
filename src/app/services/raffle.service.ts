@@ -9,15 +9,15 @@ import { environment } from '../../environment/environment';
 })
 export class RaffleService {
 
-  private baseUrl = 'http://localhost:8080/api/images';
-  //private baseUrl = ' https://c5b7-149-22-84-137.ngrok-free.app/api/images';
+  //private baseUrl = 'http://localhost:8080/api/images';
+  private baseUrl = ' https://ms-rifas-latest.onrender.com/api/images';
 
-  private apiUrl = 'http://localhost:8080/api/rifas';
-  //private apiUrl = ' https://c5b7-149-22-84-137.ngrok-free.app/api/rifas';
+  //private apiUrl = 'http://localhost:8080/api/rifas';
+  private apiUrl = ' https://ms-rifas-latest.onrender.com/api/rifas';
 
-  private VIPUrl ='http://localhost:8080/codigos-vip'
+  //private VIPUrl ='http://localhost:8080/codigos-vip'
 
- // private VIPUrl =' https://c5b7-149-22-84-137.ngrok-free.app/codigos-vip';
+  private VIPUrl =' https://ms-rifas-latest.onrender.com/codigos-vip';
 
   constructor(private http: HttpClient) { }
 
@@ -95,7 +95,7 @@ export class RaffleService {
 
 
   deleteImage(fileName: string): Observable<void> {
-    const url = `http://localhost:8080/api/images/${fileName}`;
+    const url = `https://ms-rifas-latest.onrender.com/api/images/${fileName}`;
     return this.http.delete<void>(url);
   }
 

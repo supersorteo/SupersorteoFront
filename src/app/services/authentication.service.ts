@@ -15,8 +15,9 @@ import { environment } from '../../environment/environment';
 export class AuthenticationService {
 
 
-  private apiUrl = 'http://localhost:8080/usuarios';
-  //private apiUrl = ' https://c5b7-149-22-84-137.ngrok-free.app/usuarios'
+  //private apiUrl = 'http://localhost:8080/usuarios';
+
+  private apiUrl = 'https://ms-rifas-latest.onrender.com/usuarios'
   //private apiUrl =  `${environment.API_BASE_URL}/usuarios`
 
   private readonly CURRENT_USER_KEY = 'currentUser';

@@ -7,8 +7,8 @@ import { BehaviorSubject, map, Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class ParticipanteService {
-  private apiUrl = 'http://localhost:8080/api/participantes';
-  //private apiUrl = ' https://c5b7-149-22-84-137.ngrok-free.app/api/participantes'
+  //private apiUrl = 'http://localhost:8080/api/participantes';
+  private apiUrl = 'https://ms-rifas-latest.onrender.com/api/participantes'
 
   private participantsSubject = new BehaviorSubject<Participante[]>([]);
   participants$ = this.participantsSubject.asObservable();

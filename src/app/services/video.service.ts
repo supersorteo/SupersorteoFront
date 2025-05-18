@@ -7,19 +7,14 @@ import { catchError, map, Observable, throwError } from 'rxjs';
 })
 export class VideoService {
 
-  private apiUrl = 'http://localhost:8080/api/videos/';
-  //private apiUrl = ' https://c5b7-149-22-84-137.ngrok-free.app/api/videos/';
+  //private apiUrl = 'http://localhost:8080/api/videos/';
+  private apiUrl = 'https://ms-rifas-latest.onrender.com/api/videos/';
   constructor(private http: HttpClient) { }
 
 
 
 
- // Sube el video y retorna el mensaje del backend como texto
- uploadVideo1(file: File): Observable<string> {
-  const formData = new FormData();
-  formData.append('file', file); // La clave "file" debe coincidir con la del backend
-  return this.http.post(`${this.apiUrl}upload`, formData, { responseType: 'text' });
-}
+
 
 uploadVideo(file: File): Observable<string> {
   const formData = new FormData();
