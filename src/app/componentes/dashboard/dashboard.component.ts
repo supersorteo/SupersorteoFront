@@ -1353,7 +1353,7 @@ compartirRifa(raffle: any) {
   }
 
   shareOnWhatsApp(): void {
-    const url = 'www.metroapp.site';
+    const url = 'https://pruebafront-bzli.onrender.com/';
     const text = `Necesito un codigo VIP. ${url}`;
     const whatsappUrl = `whatsapp://send?text=${encodeURIComponent(text)}`; window.location.href = whatsappUrl;
   }
