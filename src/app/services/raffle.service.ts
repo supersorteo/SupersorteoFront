@@ -10,14 +10,14 @@ import { environment } from '../../environment/environment';
 export class RaffleService {
 
   //private baseUrl = 'http://localhost:8080/api/images';
-  private baseUrl = 'https://just-purpose-production.up.railway.app/api/images';
+  private baseUrl = 'https://adequate-purpose-production.up.railway.app/api/images';
 
   //private apiUrl = 'http://localhost:8080/api/rifas';
-  private apiUrl = 'https://just-purpose-production.up.railway.app/api/rifas';
+  private apiUrl = 'https://adequate-purpose-production.up.railway.app/api/rifas';
 
   //private VIPUrl ='http://localhost:8080/codigos-vip'
 
-  private VIPUrl ='https://just-purpose-production.up.railway.app/codigos-vip';
+  private VIPUrl ='https://adequate-purpose-production.up.railway.app/codigos-vip';
 
   constructor(private http: HttpClient) { }
 
@@ -95,7 +95,7 @@ export class RaffleService {
 
 
   deleteImage(fileName: string): Observable<void> {
-    const url = `https://just-purpose-production.up.railway.app/api/images/${fileName}`;
+    const url = `https://adequate-purpose-production.up.railway.app/api/images/${fileName}`;
     return this.http.delete<void>(url);
   }
 

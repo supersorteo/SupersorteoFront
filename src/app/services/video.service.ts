@@ -8,7 +8,7 @@ import { catchError, map, Observable, throwError } from 'rxjs';
 export class VideoService {
 
   //private apiUrl = 'http://localhost:8080/api/videos/';
-  private apiUrl = 'https://just-purpose-production.up.railway.app/api/videos/';
+  private apiUrl = 'https://adequate-purpose-production.up.railway.app/api/videos/';
   constructor(private http: HttpClient) { }
 
 

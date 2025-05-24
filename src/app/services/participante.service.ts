@@ -8,7 +8,7 @@ import { BehaviorSubject, map, Observable, tap } from 'rxjs';
 })
 export class ParticipanteService {
   //private apiUrl = 'http://localhost:8080/api/participantes';
-  private apiUrl = 'https://just-purpose-production.up.railway.app/api/participantes'
+  private apiUrl = 'https://adequate-purpose-production.up.railway.app/api/participantes'
 
   private participantsSubject = new BehaviorSubject<Participante[]>([]);
   participants$ = this.participantsSubject.asObservable();
