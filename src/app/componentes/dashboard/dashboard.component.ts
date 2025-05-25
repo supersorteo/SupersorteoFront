@@ -308,6 +308,7 @@ getWinningEntry0(raffleId: number): { raffleId: number; winningNumber: number; w
 
 getWinningEntry(raffleId: number): WinningEntry | undefined {
   return this.winningData.find(entry => entry.raffleId === raffleId);
+
 }
 
 

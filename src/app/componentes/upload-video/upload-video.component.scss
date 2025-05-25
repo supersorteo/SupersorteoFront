@@ -95,3 +95,38 @@
   justify-content: center;
   margin-top: 1rem;
 }
+
+
+/* Contenedor general responsivo */
+.responsive-container {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .upload-slot-grid {
+    grid-template-columns: 1fr; /* una sola columna en móviles */
+  }
+
+  .preview-container video {
+    width: 90% !important;  /* adapta el video */
+    height: auto;
+  }
+
+  .custom-file-upload {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .delete-button {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  .upload-slot-grid {
+    padding: 0.5rem 0;
+  }
+}

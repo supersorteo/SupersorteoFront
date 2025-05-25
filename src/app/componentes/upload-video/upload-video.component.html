@@ -1,3 +1,5 @@
+
+<div class="responsive-container">
 <div class="upload-slot-grid mb-3">
 
   <!-- Input para seleccionar el video con apariencia de botón -->
@@ -60,27 +62,15 @@
 </div>
 
 
-<!--div class="video-list" *ngIf="videos.length > 0">
-  <div class="upload-slot-grid mb-3" *ngFor="let videoUrl of videos">
-    <div class="grid-item preview">
-      <div class="preview-container">
-        <video width="600" controls>
-          <source [src]="videoUrl" type="video/mp4" />
-          Tu navegador no soporta la reproducción de video.
-        </video>
-        <button type="button" class="delete-button" (click)="deleteVideo(videoUrl.split('/').pop()!)">
-          <i class="pi pi-times"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</!--div-->
+
 
 
 
 <ng-template #noVideos>
   <p>No hay videos disponibles.</p>
 </ng-template>
+</div>
+
 
 
 
