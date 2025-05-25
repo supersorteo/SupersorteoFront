@@ -1,15 +1,5 @@
 <div *ngIf="raffle">
-  <!--div-- class="external-header">
 
-    <span class="external-text">Este sorteo se hizo con:</span>
-         <a href="http://localhost:4200/" target="_blank" rel="noopener">
-          <img
-            src="assets/logoSorteo.jpg"
-            alt="Logo Sorteo"
-            class="toolbar-logo external-logo"
-          />
-        </a>
-  </!--div-->
   <div class="scroll-container">
     <div class="card">
       <h2 class="product-name" style="text-align: center; margin-bottom: 1rem;">
@@ -103,27 +93,9 @@
   <p-button label="Ver participantes"  styleClass="custom-button1" severity="info" (onClick)="mostrarDatosP()"></p-button>
 </div>
 
-<!--app-countdown-- *ngIf="showCountdown" [start]="countdownValue || 0" (finished)="onCountdownFinishedExternal()"></!--app-countdown-->
+
 <app-countdown *ngIf="showCountdown" [start]="5" (finished)="onCountdownFinishedExternal()"></app-countdown>
-<!--div-- *ngIf="!showCountdown && winningNumber !== null" class="winning-number">
-  <h2>Número ganador: {{ winningNumber }}</h2>
-</!--div-->
 
-
-
-
-<!--div-- *ngIf="!showCountdown && getWinningEntry(raffle.id) as winnerEntry" class="winning-number">
-  <h2>Número ganador: {{ winnerEntry.winningNumber }}</h2>
-  <p>Ganador: {{ winnerEntry.winningParticipant }}</p>
-</!--div-->
-
-
-<!--div *ngIf="getWinningEntry(raffle.id) as winnerEntry" class="winning-number">
-  <h2>Número ganador: {{ winnerEntry.winningNumber }}</h2>
-  <p>Ganador: {{ winnerEntry.winningParticipant }}</p>
-</div-->
-
-<!--app-confetti [fire]="showConfetti"></!--app-confetti-->
 <app-confetti [active]="showConfetti"></app-confetti>
 
 </div>

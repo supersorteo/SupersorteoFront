@@ -7,6 +7,7 @@ import { TableModule } from 'primeng/table';
 import { CodigoVip } from '../../interfaces/codigo-vip';
 import { CodigoVipServiceService } from '../../services/codigo-vip-service.service';
 import Swal from 'sweetalert2';
+import { MessageService } from 'primeng/api';
 
 
 @Component({
@@ -14,7 +15,8 @@ import Swal from 'sweetalert2';
   standalone: true,
   imports: [CommonModule,  FormsModule, TableModule, ButtonModule, DropdownModule],
   templateUrl: './codigos-vip.component.html',
-  styleUrl: './codigos-vip.component.scss'
+  styleUrl: './codigos-vip.component.scss',
+  providers: [MessageService],
 })
 export class CodigosVipComponent implements OnInit{
   codigosVip: CodigoVip[] = [];
@@ -25,7 +27,7 @@ export class CodigosVipComponent implements OnInit{
   ];
   cantidadRifas: number = 10;
   selectedCodigo!: CodigoVip;
-  constructor(private codigoVipService: CodigoVipServiceService) {}
+  constructor(private codigoVipService: CodigoVipServiceService, private messageService: MessageService) {}
 
   ngOnInit(): void {
   this.obtenerCodigosVip()
@@ -75,5 +77,27 @@ export class CodigosVipComponent implements OnInit{
       }
     });
   }
+
+
+
+copiarCodigo(codigo: string) {
+  navigator.clipboard.writeText(codigo).then(() => {
+    Swal.fire({
+      title: 'Código copiado',
+      text: `El código ${codigo} ha sido copiado al portapapeles.`,
+      icon: 'success',
+      timer: 2000,
+      showConfirmButton: false
+    });
+  }).catch(err => {
+    console.error('❌ Error al copiar el código:', err);
+    Swal.fire({
+      title: 'Error',
+      text: 'No se pudo copiar el código al portapapeles.',
+      icon: 'error'
+    });
+  });
+}
+
 
 }
