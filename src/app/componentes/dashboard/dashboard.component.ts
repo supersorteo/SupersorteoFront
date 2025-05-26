@@ -1311,8 +1311,8 @@ compartirRifa(raffle: any) {
       img.src = URL.createObjectURL(file);
 
       img.onload = () => {
-        const maxWidth = 1024;  // Resolución máxima permitida
-        const maxHeight = 1024; // Resolución máxima permitida
+        const maxWidth = 6000;  // Resolución máxima permitida
+        const maxHeight = 6000; // Resolución máxima permitida
 
         if (img.width > maxWidth || img.height > maxHeight) {
           this.messageService.add({
